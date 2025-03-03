@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OSTTRA Application</title>
+<style>
+/* Style the button */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #FF0061; /* Set the button color */
+  color: white; /* Optional: Set text color to white for better contrast */
+  border: none; /* Optional: Remove default button border */
+  float: right; /* Shift the button to the right */
+}
+
+/*Optional: Style the body if needed to make the float:right work properly */
+body {
+    padding: 20px; /* add some padding to the body */
+    box-sizing: border-box; /* include padding in the total width and height of the body */
+}
+
+</style>
+</head>
+<body>
+
+<button onclick="openNewPage()">Contact Support</button>
+
+<p>This is the main page content.</p>
+
+<script>
+function openNewPage() {
+  // Replace 'webtocase.html' with the actual URL of your new page.
+  window.location.href = 'webtocase.html'; // opens in same tab
+}
+</script>
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DAe000005qfnN',
+				'OSTTRAChatforExternal',
+				'https://osttra--osttrapoc.sandbox.my.site.com/ESWOSTTRAChatforExternal1740979158395',
+				{
+					scrt2URL: 'https://osttra--osttrapoc.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://osttra--osttrapoc.sandbox.my.site.com/ESWOSTTRAChatforExternal1740979158395/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</body>
+</html>
